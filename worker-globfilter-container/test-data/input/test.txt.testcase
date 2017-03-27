@@ -1,0 +1,44 @@
+---
+tag: "input/test.txt"
+testCaseInformation:
+  testCaseId: "input"
+  associatedTickets: null
+  description: null
+  comments: "input/test.txt"
+inputData:
+  useDataStore: true
+  inputFile: "input/test.txt"
+  storageReference: null
+  task:
+    batchDefinition: "sub-dir/**.txt"
+    batchType: "GlobPattern"
+    taskMessageType: "DocumentMessage"
+    taskMessageParams:
+      pi:datastorePartialReference: "test-datastore-partial-reference"
+      cd:aCustomDataField: "aCustomDataFieldValue"
+      newField:aNewField: "aNewFieldValue"
+      field:fileName: "CUSTOM_FILE_NAME"
+      field:binaryFile: "CUSTOM_CONTENT"
+    targetPipe: "targetPipe"
+expectedOutputData:
+  subTasks:
+  - version: 3
+    taskId: "8983485a-eb8d-4161-821f-3a8944ad3fe3"
+    taskClassifier: "DocumentWorker"
+    taskApiVersion: 1
+    taskData: "eyJmaWVsZHMiOnsiYU5ld0ZpZWxkIjpbeyJkYXRhIjoiYU5ld0ZpZWxkVmFsdWUifV0sIkNVU1RPTV9DT05URU5UIjpbeyJkYXRhIjoiVGhpcyBpcyB0aGUgY29udGVudCBmb3IgdGhlIEJpbmFyeUhhc2ggaW50ZWdyYXRpb24gdGVzdC4iLCJlbmNvZGluZyI6InV0ZjgifV0sIkNVU1RPTV9GSUxFX05BTUUiOlt7ImRhdGEiOiJBbm90aGVyRmlsZVRvVGVzdFdpdGhpblN1YkRpci50eHQifV19LCJjdXN0b21EYXRhIjp7ImFDdXN0b21EYXRhRmllbGQiOiJhQ3VzdG9tRGF0YUZpZWxkVmFsdWUifX0="
+    taskStatus: "NEW_TASK"
+    context: {}
+    to: "targetPipe"
+    tracking: null
+    sourceInfo: null
+  - version: 3
+    taskId: "20dc7942-971f-4520-9c8d-549730c3e06d"
+    taskClassifier: "DocumentWorker"
+    taskApiVersion: 1
+    taskData: "eyJmaWVsZHMiOnsiYU5ld0ZpZWxkIjpbeyJkYXRhIjoiYU5ld0ZpZWxkVmFsdWUifV0sIkNVU1RPTV9DT05URU5UIjpbeyJkYXRhIjoiVGhpcyBpcyB0aGUgY29udGVudCBmb3IgdGhlIEJpbmFyeUhhc2ggaW50ZWdyYXRpb24gdGVzdCBzdWIgc3ViIGRpci4iLCJlbmNvZGluZyI6InV0ZjgifV0sIkNVU1RPTV9GSUxFX05BTUUiOlt7ImRhdGEiOiJGaWxlVG9UZXN0V2l0aGluU3ViU3ViRGlyLnR4dCJ9XX0sImN1c3RvbURhdGEiOnsiYUN1c3RvbURhdGFGaWVsZCI6ImFDdXN0b21EYXRhRmllbGRWYWx1ZSJ9fQ=="
+    taskStatus: "NEW_TASK"
+    context: {}
+    to: "targetPipe"
+    tracking: null
+    sourceInfo: null
