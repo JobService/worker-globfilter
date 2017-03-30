@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>caf-parent</artifactId>
-        <version>1.7.0-SNAPSHOT</version>
+        <version>1.7.0-60</version>
         <relativePath />
     </parent>
 
@@ -17,7 +17,8 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
-        <caf.worker-framework.version>1.6.0-SNAPSHOT</caf.worker-framework.version>
+        <caf.worker-framework.version>1.6.0-181</caf.worker-framework.version>
+        <worker-batch-version>1.12.0-46</worker-batch-version>
     </properties>
 
     <dependencyManagement>
