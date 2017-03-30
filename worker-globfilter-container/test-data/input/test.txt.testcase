@@ -42,3 +42,13 @@ expectedOutputData:
     to: "targetPipe"
     tracking: null
     sourceInfo: null
+  - context: {}
+    sourceInfo: null
+    taskApiVersion: 1
+    taskClassifier: "DocumentWorker"
+    taskData: "eyJmaWVsZHMiOnsiYU5ld0ZpZWxkIjpbeyJkYXRhIjoiYU5ld0ZpZWxkVmFsdWUifV0sIkNVU1RPTV9DT05URU5UIjpbeyJkYXRhIjoiVGhpcyBpcyBhIHRlc3QgZG9jdW1lbnQgZm9yIGluc3RhbGwiLCJlbmNvZGluZyI6InV0ZjgifV0sIkNVU1RPTV9GSUxFX05BTUUiOlt7ImRhdGEiOiJBbm5vdGF0ZWQgSW5zdGFsbCBJbnN0cnVjdGlvbnMudHh0In1dfSwiY3VzdG9tRGF0YSI6eyJhQ3VzdG9tRGF0YUZpZWxkIjoiYUN1c3RvbURhdGFGaWVsZFZhbHVlIn19"
+    taskId: ".+"
+    taskStatus: "NEW_TASK"
+    to: "targetPipe"
+    tracking: null
+    version: 3

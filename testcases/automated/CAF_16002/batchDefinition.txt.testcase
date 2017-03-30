@@ -1,0 +1,34 @@
+---
+tag: "CAF_16002/batchDefinition.txt"
+testCaseInformation:
+  associatedTickets: "CAF-2329"
+  comments: "CAF_16002/batchDefinition.txt"
+  description: "Generate messages from an input folder and Glob filter matches on partial filename"
+  testCaseId: "CAF_16002"
+inputData:
+  inputFile: "CAF_16002/batchDefinition.txt"
+  storageReference: null
+  task:
+    batchDefinition: "sub-dir/**Install*"
+    batchType: "GlobPattern"
+    targetPipe: "targetPipe"
+    taskMessageParams:
+      cd:aCustomDataField: "aCustomDataFieldValue"
+      field:binaryFile: "CUSTOM_CONTENT"
+      field:fileName: "CUSTOM_FILE_NAME"
+      newField:aNewField: "aNewFieldValue"
+      pi:datastorePartialReference: "test-datastore-partial-reference"
+    taskMessageType: "DocumentMessage"
+  useDataStore: true
+expectedOutputData:
+  subTasks:
+  - context: {}
+    sourceInfo: null
+    taskApiVersion: 1
+    taskClassifier: "DocumentWorker"
+    taskData: "eyJmaWVsZHMiOnsiYU5ld0ZpZWxkIjpbeyJkYXRhIjoiYU5ld0ZpZWxkVmFsdWUifV0sIkNVU1RPTV9DT05URU5UIjpbeyJkYXRhIjoiVGhpcyBpcyBhIHRlc3QgZG9jdW1lbnQgZm9yIGluc3RhbGwiLCJlbmNvZGluZyI6InV0ZjgifV0sIkNVU1RPTV9GSUxFX05BTUUiOlt7ImRhdGEiOiJBbm5vdGF0ZWQgSW5zdGFsbCBJbnN0cnVjdGlvbnMudHh0In1dfSwiY3VzdG9tRGF0YSI6eyJhQ3VzdG9tRGF0YUZpZWxkIjoiYUN1c3RvbURhdGFGaWVsZFZhbHVlIn19"
+    taskId: ".+"
+    taskStatus: "NEW_TASK"
+    to: "targetPipe"
+    tracking: null
+    version: 3

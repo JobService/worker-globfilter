@@ -1,11 +1,11 @@
-## CAF_16001 - Generate messages from an input folder and Glob filter matches on file extension ##
+## CAF_16002 - Generate messages from an input folder and Glob filter matches on partial filename ##
 
-Verify that the Glob Filter worker will take a glob filter for file extension, and with an environment variable, generate a message for file matched
+Verify that the Glob Filter worker will take a glob filter for partial filename, and with an environment variable, generate a message for file matched
 
 **Test Steps**
 
 1. Point the Glob Filter Worker at a folder of files to create task messages for with environment variable
-2. Provide the Glob Filter Worker with a batch definition that takes the form of a glob filter for file extension
+2. Provide the Glob Filter Worker with a batch definition that takes the form of a glob filter for partial filename
 3. Verify that the files output are those that match the glob filter within the input folder
 
 **Test Data**
