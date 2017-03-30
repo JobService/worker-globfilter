@@ -36,8 +36,8 @@ The following is an example input JSON for the Glob Filter Worker:
     - `field:binaryFile` The name of the field that will hold the reference to the content of the file as `storage_ref` encoded string.
     - `field:fileName` The name of the field that will hold the name of the file as `utf-8` encoded string.
     - `field:binaryFileReference` The name of the field that will hold the storage reference of the file as `utf-8` encoded string.
-    - `newField:aNewField` A new field and value to be added to the output Documents' taskData fields. Given the example above, TaskMessages output taskData fields will contain a field with a key called `aNewField` with a value of `aNewFieldValue`.
-    - `cd:aCustomDataField` A field and value to add to the output Documents' taskData custom data. Given the example above, TaskMessages output taskData customData will contain a field with a key called `aCustomDataField` with a value of `aCustomDataFieldValue`.
+    - `newField:aNewField` A new field and value to be added to the output Documents' taskData fields. Given the example above, a field with a key called `aNewField` and a value of `aNewFieldValue` will be added.
+    - `cd:aCustomDataField` A field and value to add to the output Documents' taskData customData. Given the example above, a field with a key called `aCustomDataField` and a value of `aCustomDataFieldValue` will be added.
 
 - `targetPipe` The queue that generated TaskMessages should be output to.
 
