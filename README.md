@@ -25,29 +25,29 @@ The following is an example input JSON for the Glob Filter Worker:
 
 ### Input JSON fields
 
-- `batchType` The plugin to use for processing of the batchDefinition. Currently the only supported batch type is `GlobPattern`. Other batch types may be added in the future as required.
-
 - `batchDefinition` The glob filter to match - in this case `input-sub-folder/**.txt`.
+
+- `batchType` The plugin to use for processing of the batchDefinition. Currently the only supported batch type is `GlobPattern`. Other batch types may be added in the future as required.
 
 - `taskMessageType` The type of TaskMessage that should be output from the worker. This must be set to "DocumentMessage" (different types may become configurable in the future).
 
-- `taskMessageParams` A list of namespace Task Message parameters that the worker uses to build Task Messages (`pi` and `field` namespaces are described under [Task Message Parameters Namespaces](#Task-Message-Parameters-Namespaces):
-    - `pi:datastorePartialReference` The DataStore service partial reference to store file binaries against.
-    - `field:binaryFile` The name of the field that will hold the reference to the content.
-    - `field:fileName` The name of the field that will hold the name of the file.
-    - `field:binaryFileReference` The name of the field that will hold the storage reference of the file.
-    - `newField:aNewField` A new field and value to be added to output Documents' taskData fields. Given the example above, TaskMessages output taskData fields will contain a field with a key called `aNewField` with a value of `aNewFieldValue`.
-    - `cd:aCustomDataField` A field and value to add to output Documents' taskData custom data. Given the example above, TaskMessages output taskData customData will contain a field with a key called `aCustomDataField` with a value of `aCustomDataFieldValue`.
+- `taskMessageParams` A list of namespace message parameters that the worker uses to build Task Messages (`pi` and `field` namespaces are described under [Task Message Parameters Namespaces](#Task-Message-Parameters-Namespaces)):
+    - `pi:datastorePartialReference` The DataStore service partial reference to store file binaries against. 
+    - `field:binaryFile` The name of the field that will hold the reference to the content of the file as `storage_ref` encoded string.
+    - `field:fileName` The name of the field that will hold the name of the file as `utf-8` encoded string.
+    - `field:binaryFileReference` The name of the field that will hold the storage reference of the file as `utf-8` encoded string.
+    - `newField:aNewField` A new field and value to be added to the output Documents' taskData fields. Given the example above, TaskMessages output taskData fields will contain a field with a key called `aNewField` with a value of `aNewFieldValue`.
+    - `cd:aCustomDataField` A field and value to add to the output Documents' taskData custom data. Given the example above, TaskMessages output taskData customData will contain a field with a key called `aCustomDataField` with a value of `aCustomDataFieldValue`.
 
 - `targetPipe` The queue that generated TaskMessages should be output to.
 
-#### Task Message Parameters Namespaces
+#### Task Message Parameter Namespaces
 
-The following tables describe the Glob Filter Worker processing instruction and field namespace parameters:
+The following tables describe the Glob Filter Worker's processing instruction and field namespace parameters:
 
 ##### Processing instructions
 
-The processing instructions namespace, denoted with `pi`, are parameters that are used by worker operations.
+The processing instructions, denoted with `pi`, are parameters that are used by worker operations.
 
 The following table lists the processing instructions that are used by the Glob Filter worker:
 
@@ -57,7 +57,7 @@ The following table lists the processing instructions that are used by the Glob 
 
 ##### Field
 
-The fields namespace, denoted with `field`, are parameters that provide the name of the fields as to which information on the glob matched file will be stored.
+The fields, denoted with `field`, are parameters that provide the name of the fields as to which information on the glob matched file will be stored.
 
 The following table lists the fields that will be added to TaskMessage taskData `fields` output from the Glob Filter Worker when specified:
 
