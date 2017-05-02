@@ -1,33 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2015-2017 Hewlett Packard Enterprise Development LP.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
     <parent>
-        <groupId>com.hpe.caf.worker.globfilter</groupId>
+        <groupId>com.github.jobservice</groupId>
         <artifactId>worker-globfilter-aggregator</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <version>2.1.0-SNAPSHOT</version>
     </parent>
+    
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <artifactId>worker-globfilter-container</artifactId>
     
     <properties>
-        <caf.worker-store.impl>worker-store-fs</caf.worker-store.impl>
-        <worker-globfilter.container.name>${corporateDockerRegistry}/caf/worker-globfilter:${project.version}
+        <worker-globfilter.container.name>rh7-artifactory.svs.hpeswlab.net:8443/caf/worker-globfilter:${project.version}
         </worker-globfilter.container.name>
         <worker-globfilter.container.alias>globfilter-worker</worker-globfilter.container.alias>
         <test.data>${project.basedir}/test-data</test.data>
         <tests.binary.content.location>${test.data}</tests.binary.content.location>
         <caf.config.impl>config-file</caf.config.impl>
         <caf.codec.impl>codec-json</caf.codec.impl>
-        <caf.worker-store.impl>worker-store-cs</caf.worker-store.impl>
         <caf.worker-queue.impl>worker-queue-rabbit</caf.worker-queue.impl>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.hpe.caf.worker.globfilter</groupId>
+            <groupId>com.github.jobservice</groupId>
             <artifactId>worker-globfilter-batch-plugin</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -36,7 +52,7 @@
             <artifactId>caf-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.hpe.caf.worker.batch</groupId>
+            <groupId>com.github.jobservice</groupId>
             <artifactId>worker-batch</artifactId>
             <version>${worker-batch-version}</version>
         </dependency>
@@ -94,7 +110,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.hpe.caf.worker.batch</groupId>
+            <groupId>com.github.jobservice</groupId>
             <artifactId>worker-batch-testing</artifactId>
             <version>${worker-batch-version}</version>
             <scope>test</scope>
@@ -263,7 +279,6 @@
                         <rabbit.host>${docker.host.address}</rabbit.host>
                         <!--<task.template>${project.basedir}/template.yaml</task.template>-->
                     </environmentVariables>
-                    <!--<debugForkedProcess>true</debugForkedProcess>-->
                 </configuration>
             </plugin>
 

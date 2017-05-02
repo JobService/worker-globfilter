@@ -1,24 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2015-2017 Hewlett Packard Enterprise Development LP.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    
+    <name>Worker Globfilter</name>
+    <description>Orchestration, Management and Monitoring of Data Processing</description>
+    <url>https://jobservice.github.io/job-service/</url>
 
     <parent>
         <groupId>com.github.cafapi</groupId>
-        <artifactId>caf-parent</artifactId>
-        <version>1.7.0-60</version>
-        <relativePath />
+        <artifactId>caf-common</artifactId>
+        <version>1.9.0-197</version>
     </parent>
 
-    <groupId>com.hpe.caf.worker.globfilter</groupId>
+    <groupId>com.github.jobservice</groupId>
     <artifactId>worker-globfilter-aggregator</artifactId>
     <packaging>pom</packaging>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>2.1.0-SNAPSHOT</version>
+    
+    <developers>
+        <developer>
+            <id>arogan92</id>
+            <name>Adam Rogan</name>
+            <email>adam.pau.rogan@hpe.com</email>
+        </developer>
+        <developer>
+            <id>CJComac</id>
+            <name>Christopher Comac</name>
+            <email>christopher.jam.comac@hpe.com</email>
+        </developer>
+        <developer>
+            <id>dermot-hardy</id>
+            <name>Dermot Hardy</name>
+            <email>dermot.hardy@hpe.com</email>
+        </developer>
+        <developer>
+            <id>michael-bryson</id>
+            <name>Michael Bryson</name>
+            <email>michael.bryson@hpe.com</email>
+        </developer>
+    </developers>
 
     <properties>
-        <caf.worker-framework.version>1.6.0-181</caf.worker-framework.version>
-        <worker-batch-version>1.12.0-46</worker-batch-version>
+        <caf.worker-framework.version>1.7.0-211</caf.worker-framework.version>
+        <worker-batch-version>2.0.1-11</worker-batch-version>
     </properties>
 
     <dependencyManagement>
@@ -37,5 +80,11 @@
         <module>worker-globfilter-batch-plugin</module>
         <module>worker-globfilter-container</module>
     </modules>
+    
+     <scm>
+        <connection>scm:git:https://github.com/JobService/worker-globfilter.git</connection>
+        <developerConnection>scm:git:https://github.com/JobService/worker-globfilter.git</developerConnection>
+        <url>https://github.com/JobService/worker-globfilter.git</url>
+    </scm>
 
 </project>
