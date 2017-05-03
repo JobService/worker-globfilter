@@ -315,7 +315,7 @@
                             <goal>push</goal>
                         </goals>
                         <configuration>
-                            <image>${worker-globfilter.container.alias}</image>
+                            <filter>${worker-globfilter.container.alias}</filter>
                         </configuration>
                     </execution>
                 </executions>
