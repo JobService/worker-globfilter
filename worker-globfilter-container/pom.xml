@@ -355,7 +355,7 @@
                         <!-- Start Rabbit image -->
                         <image>
                             <alias>rabbitmq</alias>
-                            <name>rabbitmq:3-management</name>
+                            <name>${rabbitmq.image.version}</name>
                             <run>
                                 <ports>
                                     <port>${rabbitmq.ctrl.port}:15672</port>
