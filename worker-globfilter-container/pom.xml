@@ -31,7 +31,7 @@
     <artifactId>worker-globfilter-container</artifactId>
     
     <properties>
-        <worker-globfilter.container.name>rh7-artifactory.svs.hpeswlab.net:8443/caf/worker-globfilter:${project.version}
+        <worker-globfilter.container.name>${dockerJobServiceOrg}worker-globfilter${dockerProjectVersion}
         </worker-globfilter.container.name>
         <worker-globfilter.container.alias>globfilter-worker</worker-globfilter.container.alias>
         <test.data>${project.basedir}/test-data</test.data>
