@@ -72,8 +72,8 @@
     </developers>
 
     <properties>
-        <caf.worker-framework.version>1.7.0-211</caf.worker-framework.version>
-        <worker-batch-version>2.0.1-11</worker-batch-version>
+        <caf.worker-framework.version>2.4.0-SNAPSHOT</caf.worker-framework.version>
+        <worker-batch-version>2.2.0-SNAPSHOT</worker-batch-version>
         
          <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
