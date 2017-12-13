@@ -87,19 +87,6 @@
             <artifactId>decoder-js</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.krallin</groupId>
-            <artifactId>tini</artifactId>
-            <scope>runtime</scope>
-            <type>exe</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.cafapi</groupId>
-            <artifactId>container-cert-script</artifactId>
-            <type>tar.gz</type>
-        </dependency>
-
-        <dependency>
             <groupId>com.github.workerframework</groupId>
             <artifactId>worker-testing-util</artifactId>
             <scope>test</scope>
@@ -424,7 +411,7 @@
                             <alias>${worker-globfilter.container.alias}</alias>
                             <name>${worker-globfilter.container.name}</name>
                             <build>
-                                <from>java:8</from>
+                                <from>cafapi/opensuse-jre8:1.2</from>
                                 <maintainer>christopher.jam.comac@hpe.com</maintainer>
                                 <ports>
                                     <port>8080</port>
@@ -437,13 +424,6 @@
                                     <Git.Commit>${git.revision}</Git.Commit>
                                     <caf.worker-framework.version>${caf.worker-framework.version}</caf.worker-framework.version>
                                 </labels>
-                                <entryPoint>
-                                    <exec>
-                                        <args>/maven/tini-${tini.version}.exe</args>
-                                        <args>-v</args>
-                                        <args>--</args>
-                                    </exec>
-                                </entryPoint>
                                 <cmd>/maven/worker.sh</cmd>
                                 <env>
                                     <!-- Default CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER Env Var -->
@@ -475,25 +455,6 @@
                                             <dependencySet>
                                                 <useProjectArtifact>false</useProjectArtifact>
                                                 <scope>runtime</scope>
-                                                <excludes>
-                                                    <exclude>com.github.krallin:tini</exclude>
-                                                    <exclude>com.github.cafapi:container-cert-script</exclude>
-                                                </excludes>
-                                            </dependencySet>
-                                            <dependencySet>
-                                                <useProjectArtifact>false</useProjectArtifact>
-                                                <fileMode>0755</fileMode>
-                                                <includes>
-                                                    <include>com.github.krallin:tini</include>
-                                                </includes>
-                                            </dependencySet>
-                                            <dependencySet>
-                                                <useProjectArtifact>false</useProjectArtifact>
-                                                <useTransitiveFiltering>true</useTransitiveFiltering>
-                                                <unpack>true</unpack>
-                                                <includes>
-                                                    <include>com.github.cafapi:container-cert-script</include>
-                                                </includes>
                                             </dependencySet>
                                         </dependencySets>
                                     </inline>
