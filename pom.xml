@@ -74,10 +74,10 @@
     <properties>
         <caf.worker-framework.version>2.4.0-342</caf.worker-framework.version>
         <worker-batch-version>2.2.0-63</worker-batch-version>
-        
-         <dockerHubOrganization>jobservice</dockerHubOrganization>
+        <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
+        <gitRepo>https://github.com/JobService/worker-globfilter</gitRepo>
     </properties>
 
     <dependencyManagement>
@@ -97,10 +97,10 @@
         <module>worker-globfilter-container</module>
     </modules>
     
-     <scm>
+    <scm>
         <connection>scm:git:https://github.com/JobService/worker-globfilter.git</connection>
         <developerConnection>scm:git:https://github.com/JobService/worker-globfilter.git</developerConnection>
-        <url>https://github.com/JobService/worker-globfilter.git</url>
+        <url>${gitRepo}</url>
     </scm>
 
 </project>
