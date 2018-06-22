@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2015-2017 EntIT Software LLC, a Micro Focus company.
+    Copyright 2017-2018 Micro Focus or one of its affiliates.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -25,16 +25,13 @@
     <description>Orchestration, Management and Monitoring of Data Processing</description>
     <url>https://jobservice.github.io/job-service/</url>
 
+    <inceptionYear>2017</inceptionYear>
+
     <parent>
         <groupId>com.github.cafapi</groupId>
-        <artifactId>caf-common</artifactId>
-        <version>1.14.0-1</version>
+        <artifactId>caf-common-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
-
-    <organization>
-        <name>EntIT Software LLC, a Micro Focus company</name>
-        <url>https://www.microfocus.com</url>
-    </organization>
 
     <groupId>com.github.jobservice</groupId>
     <artifactId>worker-globfilter-aggregator</artifactId>
@@ -73,6 +70,8 @@
 
     <properties>
         <caf.worker-framework.version>2.4.0-342</caf.worker-framework.version>
+        <copyrightYear>2018</copyrightYear>
+        <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Micro Focus or one of its affiliates.</copyrightNotice>
         <worker-batch-version>2.2.0-63</worker-batch-version>
         <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
