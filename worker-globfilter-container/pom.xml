@@ -45,7 +45,6 @@
         <dependency>
             <groupId>com.github.jobservice</groupId>
             <artifactId>worker-globfilter-batch-plugin</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.cafapi</groupId>
@@ -54,7 +53,6 @@
         <dependency>
             <groupId>com.github.jobservice</groupId>
             <artifactId>worker-batch</artifactId>
-            <version>${worker-batch-version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.workerframework</groupId>
@@ -99,7 +97,6 @@
         <dependency>
             <groupId>com.github.jobservice</groupId>
             <artifactId>worker-batch-testing</artifactId>
-            <version>${worker-batch-version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
