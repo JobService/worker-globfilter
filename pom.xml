@@ -69,7 +69,7 @@
     </developers>
 
     <properties>
-        <caf.worker-framework.version>2.4.0-342</caf.worker-framework.version>
+        <caf.worker-framework.version>3.2.0-SNAPSHOT</caf.worker-framework.version>
         <copyrightYear>2018</copyrightYear>
         <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Micro Focus or one of its affiliates.</copyrightNotice>
         <worker-batch-version>2.2.0-63</worker-batch-version>
