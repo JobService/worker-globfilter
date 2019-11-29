@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2017-2018 Micro Focus or one of its affiliates.
+    Copyright 2017-2020 Micro Focus or one of its affiliates.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -38,13 +38,6 @@
     <packaging>pom</packaging>
     <version>2.3.0-SNAPSHOT</version>
     
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-    
     <developers>
         <developer>
             <id>arogan92</id>
@@ -70,8 +63,7 @@
 
     <properties>
         <caf.worker-framework.version>2.4.0-342</caf.worker-framework.version>
-        <copyrightYear>2018</copyrightYear>
-        <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Micro Focus or one of its affiliates.</copyrightNotice>
+        <copyrightYear>2020</copyrightYear>
         <worker-batch-version>2.2.0-63</worker-batch-version>
         <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
