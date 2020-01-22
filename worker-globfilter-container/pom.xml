@@ -409,7 +409,6 @@
                             <name>${worker-globfilter.container.name}</name>
                             <build>
                                 <from>cafapi/opensuse-jre8:1.2</from>
-                                <maintainer>christopher.jam.comac@hpe.com</maintainer>
                                 <ports>
                                     <port>8080</port>
                                     <port>8081</port>
