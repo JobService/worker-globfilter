@@ -99,6 +99,10 @@
             <artifactId>worker-batch-testing</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
     </dependencies>
 
     <profiles>
@@ -408,7 +412,7 @@
                             <alias>${worker-globfilter.container.alias}</alias>
                             <name>${worker-globfilter.container.name}</name>
                             <build>
-                                <from>cafinternal/prereleases:opensuse-jre8-3.0.0-SNAPSHOT</from>
+                                <from>cafinternal/prereleases:opensuse-jre11-3.0.0-SNAPSHOT</from>
                                 <ports>
                                     <port>8080</port>
                                     <port>8081</port>
