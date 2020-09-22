@@ -235,7 +235,7 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.20.1</version>
+                <version>0.26.1</version>
                 <executions>
                     <execution>
                         <id>build-docker-container</id>
@@ -271,12 +271,11 @@
                 </executions>
                 <configuration>
                     <verbose>true</verbose>
-                    <autoPull>always</autoPull>
                     <logDate>default</logDate>
                     <images>
                         <image>
                             <alias>webdav</alias>
-                            <name>cloudesire/webdav</name>
+                            <name>${dockerHubPublic}/cloudesire/webdav</name>
                             <run>
                                 <volumes>
                                     <bind>
@@ -305,7 +304,7 @@
                         <!-- Start Rabbit image -->
                         <image>
                             <alias>rabbitmq</alias>
-                            <name>rabbitmq:3.6.9-management</name>
+                            <name>${dockerHubPublic}/library/rabbitmq:3.6.9-management</name>
                             <run>
                                 <ports>
                                     <port>${rabbitmq.ctrl.port}:15672</port>
@@ -374,7 +373,7 @@
                             <alias>${worker-globfilter.container.alias}</alias>
                             <name>${worker-globfilter.container.name}</name>
                             <build>
-                                <from>cafinternal/prereleases:opensuse-jre11-3.1.0-SNAPSHOT</from>
+                                <from>${dockerHubPrivate}/cafinternal/prereleases:opensuse-jre11-3.1.0-SNAPSHOT</from>
                                 <ports>
                                     <port>8080</port>
                                     <port>8081</port>
