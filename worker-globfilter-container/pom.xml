@@ -329,7 +329,9 @@
                             <alias>config</alias>
                             <name>${project.artifactId}-test-config:${project.version}</name>
                             <build>
+                                <from>${dockerHubPublic}/library/busybox:latest</from>
                                 <assembly>
+                                    <exportTargetDir>true</exportTargetDir>
                                     <basedir>/config</basedir>
                                     <inline>
                                         <fileSets>
@@ -351,7 +353,9 @@
                             <alias>test-input</alias>
                             <name>${project.artifactId}-test-input:${project.version}</name>
                             <build>
+                                <from>${dockerHubPublic}/library/busybox:latest</from>
                                 <assembly>
+                                    <exportTargetDir>true</exportTargetDir>
                                     <basedir>/test-input</basedir>
                                     <inline>
                                         <fileSets>
