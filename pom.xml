@@ -63,7 +63,6 @@
         <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
-        <gitRepo>https://github.com/JobService/worker-globfilter</gitRepo>
         <enforceCorrectDependencies>true</enforceCorrectDependencies>
     </properties>
 
@@ -122,7 +121,7 @@
     <scm>
         <connection>scm:git:https://github.com/JobService/worker-globfilter.git</connection>
         <developerConnection>scm:git:https://github.com/JobService/worker-globfilter.git</developerConnection>
-        <url>${gitRepo}</url>
+        <url>https://github.com/JobService/worker-globfilter</url>
     </scm>
 
 </project>
