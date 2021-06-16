@@ -392,6 +392,9 @@
                                     <!-- Default CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER Env Var -->
                                     <CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER>/mnt/caf-worker-input-dir</CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER>
                                 </env>
+                                <healthCheck>
+                                    <cmd>curl -f http://localhost:8081/healthcheck || exit 1</cmd>
+                                </healthCheck>
                                 <assembly>
                                     <mode>tar</mode>
                                     <inline>
