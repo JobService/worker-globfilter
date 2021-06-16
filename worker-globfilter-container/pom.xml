@@ -206,7 +206,7 @@
                         <expected.folder>${test.data}</expected.folder>
                         <test.sourcefile.base.folder>${test.binary.content.location}</test.sourcefile.base.folder>
                         <datastore.enabled>false</datastore.enabled>
-                        <worker.testing.usehttpdatastore>false</worker.testing.usehttpdatastore>
+                        <worker.testing.usehttpdatastore>true</worker.testing.usehttpdatastore>
                     </systemPropertyVariables>
                     <environmentVariables>
                         <CAF_APPNAME>test/worker-globfilter</CAF_APPNAME>
