@@ -206,11 +206,13 @@
                         <expected.folder>${test.data}</expected.folder>
                         <test.sourcefile.base.folder>${test.binary.content.location}</test.sourcefile.base.folder>
                         <datastore.enabled>false</datastore.enabled>
+                        <worker.testing.usehttpdatastore>true</worker.testing.usehttpdatastore>
                     </systemPropertyVariables>
                     <environmentVariables>
                         <CAF_APPNAME>test/worker-globfilter</CAF_APPNAME>
                         <CAF_CONFIG_PATH>${project.basedir}/test-configs</CAF_CONFIG_PATH>
                         <CAF_INTEGRATIONTESTS_FS_PATH>\\${docker.host.address}@${webdav.apache.port}\webdav</CAF_INTEGRATIONTESTS_FS_PATH>
+                        <CAF_WORKER_HTTP_DATASTORE_URL>http://${docker.host.address}:${webdav.apache.port}/webdav</CAF_WORKER_HTTP_DATASTORE_URL>
                         <!-- Environment variables needed for old style tests-->
                         <rabbit.port>${rabbitmq.node.port}</rabbit.port>
                         <rabbit.host>${docker.host.address}</rabbit.host>
@@ -390,6 +392,9 @@
                                     <!-- Default CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER Env Var -->
                                     <CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER>/mnt/caf-worker-input-dir</CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER>
                                 </env>
+                                <healthCheck>
+                                    <cmd>curl -f http://localhost:8081/healthcheck || exit 1</cmd>
+                                </healthCheck>
                                 <assembly>
                                     <mode>tar</mode>
                                     <inline>
