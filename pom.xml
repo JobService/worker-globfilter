@@ -57,7 +57,7 @@
     </developers>
 
     <properties>
-        <caf.worker-framework.version>5.1.0-SNAPSHOT</caf.worker-framework.version>
+        <caf.worker-framework.version>5.1.0-919</caf.worker-framework.version>
         <copyrightYear>2020</copyrightYear>
         <worker-batch-version>3.6.0-SNAPSHOT</worker-batch-version>
         <dockerHubOrganization>jobservice</dockerHubOrganization>
