@@ -59,7 +59,7 @@
     <properties>
         <caf.worker-framework.version>5.1.0-919</caf.worker-framework.version>
         <copyrightYear>2020</copyrightYear>
-        <worker-batch-version>3.6.0</worker-batch-version>
+        <worker-batch-version>3.6.0-88</worker-batch-version>
         <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
