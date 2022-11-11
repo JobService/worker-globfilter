@@ -1,4 +1,4 @@
-# worker-globfilter
+# worker-globfilter--
 
 The GlobFilter Worker is a Batch Worker which takes in a glob filter as the batch definition, filters a given directory for matches and creates items of work from those matches.
 
