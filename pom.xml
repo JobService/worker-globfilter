@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2017-2020 Micro Focus or one of its affiliates.
+    Copyright 2023 Open Text.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -58,7 +58,8 @@
 
     <properties>
         <caf.worker-framework.version>5.1.0-919</caf.worker-framework.version>
-        <copyrightYear>2020</copyrightYear>
+        <copyrightYear>2023</copyrightYear>
+        <copyrightNotice>Copyright ${copyrightYear} Open Text.</copyrightNotice>
         <worker-batch-version>3.6.0-88</worker-batch-version>
         <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
