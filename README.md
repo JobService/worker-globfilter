@@ -25,8 +25,6 @@ The following is an example input JSON for the Glob Filter Worker:
 
 ### Input JSON fields
 
-- `batchDefinition` The glob filter to match - in this case `input-sub-folder/**.txt`.
-
 - `batchType` The plugin to use for processing of the batchDefinition. Currently the only supported batch type is `GlobPattern`. Other batch types may be added in the future as required.
 
 - `taskMessageType` The type of TaskMessage that should be output from the worker. This must be set to "DocumentMessage" (different types may become configurable in the future).
