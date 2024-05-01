@@ -65,6 +65,7 @@
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
         <enforceCorrectDependencies>true</enforceCorrectDependencies>
+        <projectDockerRegistry>worker-globfilter-${project.version}.project-registries.local</projectDockerRegistry>
     </properties>
 
     <dependencyManagement>
@@ -134,5 +135,17 @@
         <developerConnection>scm:git:https://github.com/JobService/worker-globfilter.git</developerConnection>
         <url>https://github.com/JobService/worker-globfilter</url>
     </scm>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.cafapi.plugins.docker.versions</groupId>
+                    <artifactId>docker-versions-maven-plugin</artifactId>
+                    <version>1.0.0-SNAPSHOT</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
