@@ -146,6 +146,35 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.github.cafapi.plugins.docker.versions</groupId>
+                <artifactId>docker-versions-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <imageManagement>
+                        <image>
+                            <repository>${dockerHubPublic}/cafapi/opensuse-jre11</repository>
+                            <tag>3.10.1</tag>
+                            <digest>sha256:cbcffbcd62e7794c3ef2badf8a7da8403047d917b1e135f0b8b2bdb0101bc7c1</digest>
+                        </image>
+                        <image>
+                            <repository>${dockerHubPublic}/cloudesire/webdav</repository>
+                            <tag>latest</tag>
+                            <digest>sha256:92a7498003381dc5b939dbc7d53b5e6c380758f3947588230dfaf7e73718bda8</digest>
+                        </image>
+                        <image>
+                            <repository>${dockerHubPublic}/library/busybox</repository>
+                            <tag>latest</tag>
+                        </image>
+                        <image>
+                            <repository>${dockerHubPublic}/library/rabbitmq</repository>
+                            <tag>3.6.9-management</tag>
+                        </image>
+                    </imageManagement>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
