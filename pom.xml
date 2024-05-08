@@ -170,6 +170,7 @@
                         <image>
                             <repository>${dockerHubPublic}/library/rabbitmq</repository>
                             <tag>3.6.9-management</tag>
+                            <digest>sha256:281ee777b811aec6c605001e436936c0f9462f5c4c72e4ced734094f13bb7ac7</digest>
                         </image>
                     </imageManagement>
                 </configuration>
