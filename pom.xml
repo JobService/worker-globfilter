@@ -65,6 +65,7 @@
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
         <enforceCorrectDependencies>true</enforceCorrectDependencies>
+        <projectDockerRegistry>worker-globfilter-${project.version}.project-registries.local</projectDockerRegistry>
     </properties>
 
     <dependencyManagement>
@@ -134,5 +135,47 @@
         <developerConnection>scm:git:https://github.com/JobService/worker-globfilter.git</developerConnection>
         <url>https://github.com/JobService/worker-globfilter</url>
     </scm>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.cafapi.plugins.docker.versions</groupId>
+                    <artifactId>docker-versions-maven-plugin</artifactId>
+                    <version>1.0.0-SNAPSHOT</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.github.cafapi.plugins.docker.versions</groupId>
+                <artifactId>docker-versions-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <imageManagement>
+                        <image>
+                            <repository>${dockerHubPublic}/cafapi/opensuse-jre11</repository>
+                            <tag>3.10.1</tag>
+                            <digest>sha256:cbcffbcd62e7794c3ef2badf8a7da8403047d917b1e135f0b8b2bdb0101bc7c1</digest>
+                        </image>
+                        <image>
+                            <repository>${dockerHubPublic}/cloudesire/webdav</repository>
+                            <tag>latest</tag>
+                        </image>
+                        <image>
+                            <repository>${dockerHubPublic}/library/busybox</repository>
+                            <tag>1.36.1</tag>
+                            <digest>sha256:5eef5ed34e1e1ff0a4ae850395cbf665c4de6b4b83a32a0bc7bcb998e24e7bbb</digest>
+                        </image>
+                        <image>
+                            <repository>${dockerHubPublic}/library/rabbitmq</repository>
+                            <tag>3.6.9-management</tag>
+                            <digest>sha256:c450736429ad0dc32a20e018ee4eb46f198749c0b2520ed17694797e24be7d24</digest>
+                        </image>
+                    </imageManagement>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
