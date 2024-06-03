@@ -20,8 +20,8 @@ import com.hpe.caf.worker.batch.plugins.messagebuilder.GlobFilterWorkerTaskMessa
 import com.hpe.caf.worker.document.DocumentWorkerFieldEncoding;
 import com.hpe.caf.worker.document.DocumentWorkerFieldValue;
 import com.hpe.caf.worker.document.DocumentWorkerTask;
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.List;
@@ -88,32 +88,32 @@ public class GlobFilterWorkerTaskMessageBuilderTest {
 
         // Validate new fields
         final List<DocumentWorkerFieldValue> resultNewField1 = resultTaskDataFields.get(newFieldKey);
-        Assert.assertEquals("New field 1 should be mapped to the result task data fields", newFieldValue,
-                resultNewField1.get(0).data);
+        assertEquals(newFieldValue, resultNewField1.get(0).data,
+                "New field 1 should be mapped to the result task data fields");
         final List<DocumentWorkerFieldValue> resultNewField2 = resultTaskDataFields.get(newFieldKey2);
-        Assert.assertEquals("New field 2 should be mapped to the result task data fields", newFieldValue2,
-                resultNewField2.get(0).data);
+        assertEquals(newFieldValue2, resultNewField2.get(0).data,
+                "New field 2 should be mapped to the result task data fields");
 
         // Validate expected fields
         final List<DocumentWorkerFieldValue> resultFileNameField = resultTaskDataFields.get(fileNameFieldName);
-        Assert.assertEquals("File name should be mapped to the result task data fields", documentFileName,
-                resultFileNameField.get(0).data);
+        assertEquals(documentFileName, resultFileNameField.get(0).data,
+                "File name should be mapped to the result task data fields");
         final List<DocumentWorkerFieldValue> resultBinaryFileReferenceField =
                 resultTaskDataFields.get(binaryFileReferenceFieldName);
-        Assert.assertEquals("Binary File Reference should be mapped to the result task data fields", storageReference,
-                resultBinaryFileReferenceField.get(0).data);
+        assertEquals(storageReference, resultBinaryFileReferenceField.get(0).data,
+                "Binary File Reference should be mapped to the result task data fields");
         final List<DocumentWorkerFieldValue> resultBinaryFileField =
                 resultTaskDataFields.get(binaryFileFieldName);
-        Assert.assertEquals("Binary File should be mapped to the result task data fields with data", storageReference,
-                resultBinaryFileField.get(0).data);
-        Assert.assertEquals("Binary File should be mapped to the result task data fields with encoding",
-                DocumentWorkerFieldEncoding.storage_ref, resultBinaryFileField.get(0).encoding);
+        assertEquals(storageReference, resultBinaryFileField.get(0).data,
+                "Binary File should be mapped to the result task data fields with data");
+        assertEquals(DocumentWorkerFieldEncoding.storage_ref, resultBinaryFileField.get(0).encoding,
+                "Binary File should be mapped to the result task data fields with encoding");
 
         // Validate expected custom data
         final Map<String, String> resultTaskDataCustomData = ((DocumentWorkerTask) result.getTaskData()).customData;
-        Assert.assertEquals("Custom data field 1 should be mapped to the result task data custom data", customDataValue,
-                resultTaskDataCustomData.get(customDataKey));
-        Assert.assertEquals("Custom data field 2 should be mapped to the result task data custom data",
-                customDataValue2, resultTaskDataCustomData.get(customDataKey2));
+        assertEquals(customDataValue, resultTaskDataCustomData.get(customDataKey),
+                "Custom data field 1 should be mapped to the result task data custom data");
+        assertEquals(customDataValue2, resultTaskDataCustomData.get(customDataKey2),
+                "Custom data field 2 should be mapped to the result task data custom data");
     }
 }

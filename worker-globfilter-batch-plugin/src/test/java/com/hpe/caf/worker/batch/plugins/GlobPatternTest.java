@@ -23,9 +23,12 @@ import com.hpe.caf.worker.batch.BatchWorkerServices;
 import com.hpe.caf.worker.document.DocumentWorkerConstants;
 import com.hpe.caf.worker.document.DocumentWorkerFieldEncoding;
 import com.hpe.caf.worker.document.DocumentWorkerTask;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
 import java.io.File;
@@ -46,7 +49,7 @@ public class GlobPatternTest {
         // Get the documents from test resources that match the glob filter
         final List<Path> documentMatches = new GlobPattern().getDocumentMatches(globTaskFilter);
         if (documentMatches.size() != 2) {
-            Assert.fail("Expected number of document matches not returned");
+            fail("Expected number of document matches not returned");
         }
     }
 
@@ -63,7 +66,7 @@ public class GlobPatternTest {
         // Get the documents from test resources that match the glob filter
         final List<Path> documentMatches = new GlobPattern().getDocumentMatches(globTaskFilter);
         if (documentMatches.size() != 2) {
-            Assert.fail("Expected number of document matches not returned");
+            fail("Expected number of document matches not returned");
         }
 
         final String dataStorePartialReferenceValue = UUID.randomUUID().toString().replace("-", "");
@@ -101,43 +104,43 @@ public class GlobPatternTest {
         plugin.processBatch(testWorkerServices, globTaskFilter, "DocumentMessage", testTaskMessageParams);
 
         // Verify that expected number of sub batches were registered
-        Assert.assertEquals("Expecting sub-batches to be created.", 0, subBatchCount);
+        assertEquals(0, subBatchCount, "Expecting sub-batches to be created.");
 
         // Verify that expected number of messages were registered
-        Assert.assertEquals("Expecting same number of task messages generated as references we had on batch" +
-                " definition.", documentMatches.size(), constructedTaskMessages.size());
+        assertEquals(documentMatches.size(), constructedTaskMessages.size(),
+                "Expecting same number of task messages generated as references we had on batch definition.");
 
         // For each task message created by the plugin assert that the fields are set as expected
         for (final TaskMessage returnedMessage : constructedTaskMessages) {
             checkClassifierAndApiVersion(returnedMessage);
 
             final DocumentWorkerTask taskData = (DocumentWorkerTask) returnedMessage.getTaskData();
-            Assert.assertNotNull("Expecting task data returned to not be null.", taskData);
+            assertNotNull(taskData, "Expecting task data returned to not be null.");
 
             // Verify that the customData has been set correctly
             final String taskDataCustomDataFieldValue = taskData.customData.get(customDataField);
-            Assert.assertEquals("Expecting customData to be returned as expected", customDataFieldValue,
-                    taskDataCustomDataFieldValue);
+            assertEquals(customDataFieldValue, taskDataCustomDataFieldValue,
+                    "Expecting customData to be returned as expected");
 
             // Verify that the CONTENT field data is correct
             final String expectedContentKeyValue = dataStorePartialReferenceValue + "/" + "mockRefId";
-            Assert.assertEquals(expectedContentKeyValue,
+            assertEquals(expectedContentKeyValue,
                     taskData.fields.get(customBinaryFileFieldName).get(0).data);
             // Verify that the CONTENT field encoding is correct
             final DocumentWorkerFieldEncoding expectedDocumentWorkerFieldEncoding =
                     DocumentWorkerFieldEncoding.storage_ref;
-            Assert.assertEquals(expectedDocumentWorkerFieldEncoding,
+            assertEquals(expectedDocumentWorkerFieldEncoding,
                     taskData.fields.get(customBinaryFileFieldName).get(0).encoding);
 
             // Verify that the STORAGE_REFERENCE field data is correct
-            Assert.assertEquals(expectedContentKeyValue,
+            assertEquals(expectedContentKeyValue,
                     taskData.fields.get(customBinaryFileReferenceFieldName).get(0).data);
 
             // Verify that the FILE_NAME field contains an expected file name
             final String fileName = taskData.fields.get(customFileName).get(0).data;
 
-            Assert.assertTrue("FILE_NAME field should contain file name that we expect",
-                    documentMatches.stream().anyMatch(path -> path.toFile().getName().equals(fileName)));
+            assertTrue(documentMatches.stream().anyMatch(path -> path.toFile().getName().equals(fileName)),
+                    "FILE_NAME field should contain file name that we expect");
             for (int i = 0; i < documentMatches.size(); i++) {
                 if (documentMatches.get(i).toFile().getName().endsWith(fileName)) {
                     documentMatches.remove(i);
@@ -158,7 +161,7 @@ public class GlobPatternTest {
         System.setProperty("CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER", pathToTestItems);
     }
 
-    @After
+    @AfterEach
     public void reset(){
         testWorkerServices = null;
         testTaskMessageParams = null;
@@ -166,10 +169,10 @@ public class GlobPatternTest {
     }
 
     private static void checkClassifierAndApiVersion(final TaskMessage returnedMessage) {
-        Assert.assertEquals("Expecting task api version to be that defined in Test builder.",
-                            DocumentWorkerConstants.WORKER_API_VER, returnedMessage.getTaskApiVersion());
-        Assert.assertEquals("Expecting task classifier to be that defined in Test builder.",
-                            DocumentWorkerConstants.WORKER_NAME, returnedMessage.getTaskClassifier());
+        assertEquals(DocumentWorkerConstants.WORKER_API_VER, returnedMessage.getTaskApiVersion(),
+                "Expecting task api version to be that defined in Test builder.");
+        assertEquals(DocumentWorkerConstants.WORKER_NAME, returnedMessage.getTaskClassifier(),
+                "Expecting task classifier to be that defined in Test builder.");
     }
 
     private static Map<String, String> createTaskMessageParams(final Map.Entry<String, String>... entries) {
