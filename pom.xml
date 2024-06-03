@@ -60,7 +60,7 @@
         <caf.worker-framework.version>8.1.0-SNAPSHOT</caf.worker-framework.version>
         <copyrightYear>2024</copyrightYear>
         <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Open Text.</copyrightNotice>
-        <worker-batch-version>3.6.0-88</worker-batch-version>
+        <worker-batch-version>3.6.1-176</worker-batch-version>
         <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
@@ -142,7 +142,7 @@
                 <plugin>
                     <groupId>com.github.cafapi.plugins.docker.versions</groupId>
                     <artifactId>docker-versions-maven-plugin</artifactId>
-                    <version>1.0.0-29</version>
+                    <version>1.0.0-SNAPSHOT</version>
                 </plugin>
             </plugins>
         </pluginManagement>
