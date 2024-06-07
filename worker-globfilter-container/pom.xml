@@ -435,7 +435,6 @@
                                     <CAF_APPNAME>test/worker-globfilter</CAF_APPNAME>
                                     <CAF_CONFIG_PATH>/config</CAF_CONFIG_PATH>
                                     <CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER>/test-input</CAF_GLOB_WORKER_BINARY_DATA_INPUT_FOLDER>
-                                    <CAF_RABBITMQ_QUEUE_TYPE>quorum</CAF_RABBITMQ_QUEUE_TYPE>
                                 </env>
                                 <volumes>
                                     <from>
