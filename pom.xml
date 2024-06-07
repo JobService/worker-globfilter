@@ -156,6 +156,7 @@
                         <image>
                             <repository>${dockerHubPublic}/cafapi/opensuse-jre17</repository>
                             <tag>4.0.1</tag>
+                            <digest>sha256:434c16f975fbbe2f4adfc879d88a32b5f8fcc92a2d8e29e3598dc10088717405</digest>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/cloudesire/webdav</repository>
