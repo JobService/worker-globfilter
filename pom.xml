@@ -30,7 +30,7 @@
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>caf-common-parent</artifactId>
-        <version>2.3.0-212</version>
+        <version>5.0.0-431</version>
     </parent>
 
     <groupId>com.github.jobservice</groupId>
@@ -80,12 +80,12 @@
             <dependency>
                 <groupId>com.github.workerframework.testing</groupId>
                 <artifactId>workerframework-testing-util</artifactId>
-                <version>1.0.0-82</version>
+                <version>3.1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.workerframework.testing</groupId>
                 <artifactId>workerframework-testing-integration</artifactId>
-                <version>1.0.0-82</version>
+                <version>3.1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.cafdataprocessing</groupId>
@@ -154,9 +154,8 @@
                 <configuration>
                     <imageManagement>
                         <image>
-                            <repository>${dockerHubPublic}/cafapi/opensuse-jre11</repository>
-                            <tag>4.0.0</tag>
-                            <digest>sha256:03c2b7fe78f3db1831a492ca341266eca7efb92f1f4968939308b9d038aba97c</digest>
+                            <repository>${dockerHubPublic}/cafapi/opensuse-jre17</repository>
+                            <tag>4.0.1</tag>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/cloudesire/webdav</repository>
