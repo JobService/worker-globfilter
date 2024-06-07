@@ -15,8 +15,8 @@
  */
 package com.hpe.caf.worker.batch.plugins;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.UUID;
 
@@ -32,9 +32,9 @@ public class GlobFilterDocumentTest {
 
         final GlobFilterDocument globFilterDocument = new GlobFilterDocument(storageReference, fileName);
 
-        Assert.assertEquals("Storage Reference should be set correctly", storageReference,
-                globFilterDocument.getStorageReference());
+        assertEquals(storageReference, globFilterDocument.getStorageReference(),
+                "Storage Reference should be set correctly");
 
-        Assert.assertEquals("File Name should be set correctly", fileName, globFilterDocument.getFileName());
+        assertEquals(fileName, globFilterDocument.getFileName(), "File Name should be set correctly");
     }
 }

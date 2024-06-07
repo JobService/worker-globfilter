@@ -30,7 +30,7 @@
     <parent>
         <groupId>com.github.cafapi</groupId>
         <artifactId>caf-common-parent</artifactId>
-        <version>2.3.0-212</version>
+        <version>5.0.0-431</version>
     </parent>
 
     <groupId>com.github.jobservice</groupId>
@@ -57,7 +57,7 @@
     </developers>
 
     <properties>
-        <caf.worker-framework.version>5.1.0-919</caf.worker-framework.version>
+        <caf.worker-framework.version>8.1.0-SNAPSHOT</caf.worker-framework.version>
         <copyrightYear>2024</copyrightYear>
         <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Open Text.</copyrightNotice>
         <worker-batch-version>3.6.0-88</worker-batch-version>
@@ -72,7 +72,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.github.workerframework</groupId>
-                <artifactId>worker-framework</artifactId>
+                <artifactId>worker-framework-aggregator</artifactId>
                 <version>${caf.worker-framework.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -80,12 +80,12 @@
             <dependency>
                 <groupId>com.github.workerframework.testing</groupId>
                 <artifactId>workerframework-testing-util</artifactId>
-                <version>1.0.0-82</version>
+                <version>3.1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.workerframework.testing</groupId>
                 <artifactId>workerframework-testing-integration</artifactId>
-                <version>1.0.0-82</version>
+                <version>3.1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.cafdataprocessing</groupId>
@@ -154,9 +154,9 @@
                 <configuration>
                     <imageManagement>
                         <image>
-                            <repository>${dockerHubPublic}/cafapi/opensuse-jre11</repository>
+                            <repository>${dockerHubPublic}/cafapi/opensuse-jre17</repository>
                             <tag>4.0.1</tag>
-                            <digest>sha256:6fc1394f496993ec4b693fd6ab947e610a6f1f55629b23ce97fd07399f509a38</digest>
+                            <digest>sha256:434c16f975fbbe2f4adfc879d88a32b5f8fcc92a2d8e29e3598dc10088717405</digest>
                         </image>
                         <image>
                             <repository>${dockerHubPublic}/cloudesire/webdav</repository>

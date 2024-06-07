@@ -3,5 +3,6 @@
         "inputQueue": "test-input-1",
         "retryQueue": "test-input-1",
         "rejectedQueue": "test-rejected-1",
-        "retryLimit": 2
+        "retryLimit": 2,
+        "queueType": "quorum"
 }
