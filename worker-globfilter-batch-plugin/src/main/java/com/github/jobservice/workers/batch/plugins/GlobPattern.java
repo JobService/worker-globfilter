@@ -16,9 +16,9 @@
 package com.github.jobservice.workers.batch.plugins;
 
 import com.github.jobservice.messagebuilder.TaskMessage;
-import com.github.jobservice.worker.batch.BatchDefinitionException;
-import com.github.jobservice.worker.batch.BatchWorkerPlugin;
-import com.github.jobservice.worker.batch.BatchWorkerServices;
+import com.github.jobservice.workers.batch.BatchDefinitionException;
+import com.github.jobservice.workers.batch.BatchWorkerPlugin;
+import com.github.jobservice.workers.batch.BatchWorkerServices;
 import com.github.jobservice.workers.batch.plugins.messagebuilder.GlobFilterWorkerTaskMessageBuilder;
 import com.github.workerframework.api.DataStore;
 import com.github.workerframework.api.DataStoreException;
