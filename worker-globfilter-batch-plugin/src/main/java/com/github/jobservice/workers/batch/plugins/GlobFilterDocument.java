@@ -13,12 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hpe.caf.worker.batch.plugins;
+package com.github.jobservice.workers.batch.plugins;
 
-public final class GlobFilterWorkerConstants {
+public final class GlobFilterDocument {
 
-    private GlobFilterWorkerConstants() {}
+    private final String storageReference;
+    private final String fileName;
 
-    public static final String DATASTORE_PARTIAL_REFERENCE_KEY = "datastorePartialReference";
+    public GlobFilterDocument(final String storageReference, final String fileName){
+        this.storageReference = storageReference;
+        this.fileName = fileName;
+    }
 
+    public String getStorageReference(){
+        return this.storageReference;
+    }
+
+    public String getFileName() {
+        return this.fileName;
+    }
 }

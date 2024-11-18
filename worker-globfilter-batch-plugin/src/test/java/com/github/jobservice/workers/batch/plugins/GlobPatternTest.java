@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hpe.caf.worker.batch.plugins;
+package com.github.jobservice.workers.batch.plugins;
 
-import com.hpe.caf.api.worker.DataStore;
-import com.hpe.caf.api.worker.DataStoreException;
-import com.hpe.caf.messagebuilder.TaskMessage;
-import com.hpe.caf.worker.batch.BatchDefinitionException;
-import com.hpe.caf.worker.batch.BatchWorkerServices;
-import com.hpe.caf.worker.document.DocumentWorkerConstants;
-import com.hpe.caf.worker.document.DocumentWorkerFieldEncoding;
-import com.hpe.caf.worker.document.DocumentWorkerTask;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerConstants;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerFieldEncoding;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerTask;
+import com.github.jobservice.messagebuilder.TaskMessage;
+import com.github.jobservice.worker.batch.BatchDefinitionException;
+import com.github.jobservice.worker.batch.BatchWorkerServices;
+import com.github.workerframework.api.DataStore;
+import com.github.workerframework.api.DataStoreException;
 import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

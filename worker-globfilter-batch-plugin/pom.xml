@@ -35,7 +35,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.cafdataprocessing</groupId>
+            <groupId>com.github.cafdataprocessing.workers.document</groupId>
             <artifactId>worker-document-shared</artifactId>
         </dependency>
         <dependency>

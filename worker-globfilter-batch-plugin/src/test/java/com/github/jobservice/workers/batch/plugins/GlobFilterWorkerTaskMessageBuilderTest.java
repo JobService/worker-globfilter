@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hpe.caf.worker.batch.plugins;
+package com.github.jobservice.workers.batch.plugins;
 
-import com.hpe.caf.messagebuilder.TaskMessage;
-import com.hpe.caf.worker.batch.plugins.messagebuilder.GlobFilterWorkerTaskMessageBuilder;
-import com.hpe.caf.worker.document.DocumentWorkerFieldEncoding;
-import com.hpe.caf.worker.document.DocumentWorkerFieldValue;
-import com.hpe.caf.worker.document.DocumentWorkerTask;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerFieldEncoding;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerFieldValue;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerTask;
+import com.github.jobservice.messagebuilder.TaskMessage;
+import com.github.jobservice.workers.batch.plugins.messagebuilder.GlobFilterWorkerTaskMessageBuilder;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 

@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import com.hpe.caf.worker.batch.BatchTestControllerProvider;
-import com.hpe.caf.worker.testing.TestControllerSingle;
-import com.hpe.caf.worker.testing.TestItem;
-import com.hpe.caf.worker.testing.UseAsTestName;
-import com.hpe.caf.worker.testing.UseAsTestName_TestBase;
-import com.hpe.caf.worker.testing.execution.TestControllerProvider;
-import com.hpe.caf.worker.testing.execution.TestRunnerSingle;
+import com.github.jobservice.worker.batch.BatchTestControllerProvider;
+import com.github.workerframework.testing.TestControllerSingle;
+import com.github.workerframework.testing.TestItem;
+import com.github.workerframework.testing.UseAsTestName;
+import com.github.workerframework.testing.UseAsTestName_TestBase;
+import com.github.workerframework.testing.execution.TestControllerProvider;
+import com.github.workerframework.testing.execution.TestRunnerSingle;
 import org.testng.annotations.*;
 
 import java.util.Iterator;
