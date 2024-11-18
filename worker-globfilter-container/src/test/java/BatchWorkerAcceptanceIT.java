@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import com.github.jobservice.worker.batch.BatchTestControllerProvider;
+import com.github.jobservice.workers.batch.BatchTestControllerProvider;
 import com.github.workerframework.testing.TestControllerSingle;
 import com.github.workerframework.testing.TestItem;
 import com.github.workerframework.testing.UseAsTestName;
