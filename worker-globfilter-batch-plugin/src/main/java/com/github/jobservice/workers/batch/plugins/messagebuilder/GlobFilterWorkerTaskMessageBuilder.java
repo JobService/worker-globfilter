@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hpe.caf.worker.batch.plugins.messagebuilder;
+package com.github.jobservice.workers.batch.plugins.messagebuilder;
 
-import com.hpe.caf.messagebuilder.TaskMessage;
-import com.hpe.caf.worker.batch.plugins.GlobFilterDocument;
-import com.hpe.caf.worker.document.DocumentWorkerConstants;
-import com.hpe.caf.worker.document.DocumentWorkerFieldEncoding;
-import com.hpe.caf.worker.document.DocumentWorkerFieldValue;
-import com.hpe.caf.worker.document.DocumentWorkerTask;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerConstants;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerFieldEncoding;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerFieldValue;
+import com.github.cafdataprocessing.workers.document.DocumentWorkerTask;
+import com.github.jobservice.messagebuilder.TaskMessage;
+import com.github.jobservice.workers.batch.plugins.GlobFilterDocument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
