@@ -30,7 +30,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.jobservice</groupId>
+            <groupId>com.github.jobservice.workers.batch</groupId>
             <artifactId>worker-batch-extensibility</artifactId>
             <scope>provided</scope>
         </dependency>
