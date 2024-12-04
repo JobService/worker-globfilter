@@ -17,4 +17,4 @@
 logging:
   level: INFO
   loggers:
-    com.hpe.caf: INFO
+    com.github.jobservice: INFO
