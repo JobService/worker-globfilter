@@ -29,6 +29,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <artifactId>worker-globfilter-container</artifactId>
+    <name>worker-globfilter-container</name>
     
     <properties>
         <worker-globfilter.container.name>${dockerJobServiceOrg}worker-globfilter${dockerProjectVersion}
