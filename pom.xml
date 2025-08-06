@@ -57,10 +57,12 @@
     </developers>
 
     <properties>
-        <caf.worker-framework.version>9.0.0-1293</caf.worker-framework.version>
+        <caf.worker-framework.version>10.0.0-US1009117-SNAPSHOT</caf.worker-framework.version>
+        <worker.framework.testing.version>4.1.0-US1009117-SNAPSHOT</worker.framework.testing.version>
+        <worker.document.version>7.2.0-US1009117-SNAPSHOT</worker.document.version>
         <copyrightYear>2025</copyrightYear>
         <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Open Text.</copyrightNotice>
-        <worker-batch-version>4.0.0-452</worker-batch-version>
+        <worker-batch-version>4.1.0-US1009117-SNAPSHOT</worker-batch-version>
         <dockerHubOrganization>jobservice</dockerHubOrganization>
         <dockerJobServiceOrg>${dockerImagePrefix}${dockerHubOrganization}${dockerOrgSeperator}</dockerJobServiceOrg>
         <dockerProjectVersion>${dockerVersionSeperator}${project.version}</dockerProjectVersion>
@@ -80,17 +82,17 @@
             <dependency>
                 <groupId>com.github.workerframework.testing</groupId>
                 <artifactId>workerframework-testing-util</artifactId>
-                <version>4.0.0-267</version>
+                <version>${worker.framework.testing.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.workerframework.testing</groupId>
                 <artifactId>workerframework-testing-integration</artifactId>
-                <version>4.0.0-267</version>
+                <version>${worker.framework.testing.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.cafdataprocessing.workers.document</groupId>
                 <artifactId>worker-document-shared</artifactId>
-                <version>7.0.0-1496</version>
+                <version>${worker.document.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.jobservice</groupId>
