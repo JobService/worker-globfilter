@@ -57,9 +57,7 @@
     </developers>
 
     <properties>
-        <caf.worker-framework.version>10.0.0-SNAPSHOT</caf.worker-framework.version>
-        <worker.framework.testing.version>4.1.0-SNAPSHOT</worker.framework.testing.version>
-        <worker.document.version>7.2.0-US1009117-SNAPSHOT</worker.document.version>
+        <caf.worker-framework.version>10.0.0-US1009117-SNAPSHOT</caf.worker-framework.version>
         <copyrightYear>2025</copyrightYear>
         <copyrightNotice>Copyright ${project.inceptionYear}-${copyrightYear} Open Text.</copyrightNotice>
         <worker-batch-version>4.1.0-US1009117-SNAPSHOT</worker-batch-version>
@@ -82,17 +80,17 @@
             <dependency>
                 <groupId>com.github.workerframework.testing</groupId>
                 <artifactId>workerframework-testing-util</artifactId>
-                <version>${worker.framework.testing.version}</version>
+                <version>5.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.workerframework.testing</groupId>
                 <artifactId>workerframework-testing-integration</artifactId>
-                <version>${worker.framework.testing.version}</version>
+                <version>5.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.cafdataprocessing.workers.document</groupId>
                 <artifactId>worker-document-shared</artifactId>
-                <version>${worker.document.version}</version>
+                <version>7.0.0-1496</version>
             </dependency>
             <dependency>
                 <groupId>com.github.jobservice</groupId>
