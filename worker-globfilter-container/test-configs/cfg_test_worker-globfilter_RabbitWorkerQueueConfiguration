@@ -3,7 +3,6 @@
         "inputQueue": "test-input-1",
         "retryQueue": "test-input-1",
         "rejectedQueue": "test-rejected-1",
-        "missingOffloadedPayloadQueue": "test-missing-1",
         "retryLimit": 2,
         "queueType": "quorum"
 }
